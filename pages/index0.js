@@ -135,18 +135,8 @@ export default function Home() {
        - signedMessage: message signed by the owner of publicKey
        - uploadProgressCallback: function to get progress (optional)
     */
-		// theEvent.dispatchEvent(new Event('change', { bubbles: true }))
-		// console.log(theEvent)
-		// console.log(files)
-		// return
 		const sig = await encryptionSignature2()
 		console.log({ sig })
-		// const pubKey = '0x6BeF65D67c45505bA9BD5A747bA18Bb078E63549'
-		// let signer = new ethers.Wallet(pubKey)
-
-		// get consensus message
-		// const authMessage = await getAuthMessage(sig.publicKey)
-		// const signedMessage = await signer.signMessage(authMessage.message)
 
 		const { JWT, error } = await getJWT(sig.publicKey, sig.signedMessage)
 		console.log({ JWT })
