@@ -14,7 +14,6 @@ const dashboard = () => {
 
 	useEffect(() => {
 		if (!userAddress) {
-			// router.push('/')
 		}
 	}, [])
 	return (
